@@ -17,7 +17,13 @@
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Eu volutpat odio facilisis mauris sit amet. Mattis molestie a iaculis at. Tincidunt ornare massa eget egestas purus viverra accumsan. At urna condimentum mattis pellentesque id. Nulla at volutpat diam ut. Sollicitudin tempor id eu nisl nunc mi ipsum. Convallis aenean et tortor at risus viverra. Nibh praesent tristique magna sit. Gravida neque convallis a cras. Arcu cursus vitae congue mauris rhoncus aenean. Neque gravida in fermentum et. Massa sed elementum tempus egestas sed.Sollicitudin tempor id eu nisl nunc mi ipsum. Convallis aenean et tortor at risus viverra. Nibh praesent tristique magna sit. Gravida neque convallis a cras. Arcu cursus vitae congue mauris rhoncus aenean. Neque gravida in fermentum et. Massa sed elementum tempus egestas sed.
       </p>
       <h2 class="text-center mt-2 mb-4">Recent Job Openings</h2>
-      <p>To do - Show the jobs here</p>
+      <div>
+        <p>
+          {% for job in jobs: %}
+          {% include 'jobitem.html' %}
+          {% endfor %}
+        </p>
+      </div>
       <div class="text-center">
         <button type="button" class="btn btn-secondary btn-lg">Contact Us</button> 
         <p class="mt-4">Copyright GHGR#2023</p>
