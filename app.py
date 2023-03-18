@@ -20,7 +20,7 @@ JOBS = [{
 }, {
   'id': 4,
   'title': 'Software Developer',
-  'salary': '200000 AUD',
+  'salary': '220000 AUD',
   'location': 'Canberra, Australia'
 }]
 
