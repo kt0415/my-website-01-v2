@@ -1,18 +1,19 @@
 from sqlalchemy import create_engine, text
+import os
 
-db_connection_string = "mysql+pymysql://19y0ehhumewfocc6ycer:pscale_pw_dJanrVCElOakAlN1LBw1dwMYDrqr1gbSU46vHGTvqPD@ap-south.connect.psdb.cloud/kt17db?charset=utf8mb4"
+db_connection_string = os.environ['DB_CONNECT_STR']
 
 engine = create_engine(db_connection_string,
                        connect_args={"ssl": {
                          "ssl_ca": "/etc/ssl/cert.pem"
                        }})
 
-with engine.connect() as conn:
-  result = conn.execute(text("select * from jobs"))
 
-  result_dicts = []
+def load_jobs_from_db():
+  with engine.connect() as conn:
+    result = conn.execute(text("select * from jobs"))
+    jobs = []
   column_names = result.keys()
   for row in result.all():
-    result_dicts.append(dict(zip(column_names, row)))
-
-  print(result_dicts)
+    jobs.append(dict(zip(column_names, row)))
+  return jobs
