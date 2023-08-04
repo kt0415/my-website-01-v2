@@ -9,6 +9,13 @@ def hello():
   JOBS = load_jobs_from_db()
   return render_template('home.html', jobs=JOBS)
 
+@app.route("/features")
+def features():
+    return render_template('features.html')
+
+@app.route("/courses")
+def pricing():
+    return render_template('pricing.html')
 
 @app.route("/api/jobs")
 def list_jobs():

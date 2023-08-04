@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Courses - GetHiredGetRich</title>
+  {% include 'bootstrap.html' %}
+  <style>
+    .card {
+      border: none;
+    }
+
+    .card-img-top {
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .course-description {
+      height: 120px;
+      overflow: hidden;
+    }
+  </style>
+</head>
+<body>
+  {% include 'nav.html' %} 
+  {% include 'banner.html' %}
+  
+  <div class="container">
+    <h1 class="text-center mt-2 mb-4">Courses Available</h1>
+
+    <!-- Free Courses -->
+    <h2 class="mb-3">Free Courses</h2>
+    <div class="row">
+      <!-- Introduction to Programming -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="/static/intro_to_programming.jpg" alt="Introduction to Programming" class="card-img-top">
+          <div class="card-body">
+            <h3 class="card-title">Introduction to Programming</h3>
+            <div class="course-description">
+              <p class="card-text">
+                Dive into the world of programming with our free course. Learn the fundamentals of coding and gain the skills to start building your own applications.
+              </p>
+            </div>
+            <a href="/enroll/intro-to-programming" class="btn btn-primary btn-block">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Digital Marketing Essentials -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="/static/digital_marketing.jpg" alt="Digital Marketing Essentials" class="card-img-top">
+          <div class="card-body">
+            <h3 class="card-title">Digital Marketing Essentials</h3>
+            <div class="course-description">
+              <p class="card-text">
+                Master the art of online marketing with our free course. Learn how to create effective digital strategies to reach and engage your target audience.
+              </p>
+            </div>
+            <a href="/enroll/digital-marketing" class="btn btn-primary btn-block">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resume Writing Workshop -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="/static/resume_writing.jpg" alt="Resume Writing Workshop" class="card-img-top">
+          <div class="card-body">
+            <h3 class="card-title">Resume Writing Workshop</h3>
+            <div class="course-description">
+              <p class="card-text">
+                Craft a compelling resume that stands out to employers. Join our free workshop to learn essential tips and best practices for writing a winning resume.
+              </p>
+            </div>
+            <a href="/enroll/resume-writing" class="btn btn-primary btn-block">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paid Courses -->
+    <h2 class="mb-3">Paid Courses</h2>
+    <div class="row">
+      <!-- Data Science & AI Masterclass -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="/static/data_science_ai.jpg" alt="Data Science & AI Masterclass" class="card-img-top">
+          <div class="card-body">
+            <h3 class="card-title">Data Science & AI Masterclass</h3>
+            <div class="course-description">
+              <p class="card-text">
+                Accelerate your career in Data Science and Artificial Intelligence. Our comprehensive paid course covers advanced topics in data analysis, machine learning, and AI applications.
+              </p>
+            </div>
+            <a href="/enroll/data-science-ai" class="btn btn-primary btn-block">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cybersecurity Expert Certification -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="/static/cybersecurity_expert.jpg" alt="Cybersecurity Expert Certification" class="card-img-top">
+          <div class="card-body">
+            <h3 class="card-title">Cybersecurity Expert Certification</h3>
+            <div class="course-description">
+              <p class="card-text">
+                Become a certified cybersecurity expert with our in-depth paid course. Learn advanced techniques to defend against cyber threats and secure sensitive data.
+              </p>
+            </div>
+            <a href="/enroll/cybersecurity-expert" class="btn btn-primary btn-block">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Full Stack Web Development Bootcamp -->
+      <div class="col-md-4 mb-4">
+        <div class="card">
+          <img src="/static/full_stack_web_dev.jpg" alt="Full Stack Web Development Bootcamp" class="card-img-top">
+          <div class="card-body">
+            <h3 class="card-title">Full Stack Web Development Bootcamp</h3>
+            <div class="course-description">
+              <p class="card-text">
+                Master the art of building web applications from front-end to back-end. Our paid bootcamp covers the latest technologies and tools in full-stack web development.
+              </p>
+            </div>
+            <a href="/enroll/full-stack-web-dev" class="btn btn-primary btn-block">Enroll Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  {% include 'footer.html' %}
+</body>
+</html>

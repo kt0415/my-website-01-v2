@@ -4,6 +4,59 @@
     <title>{{job.title}} - GHGR</title>
     {% include 'bootstrap.html' %}
   </head>
+  <style>
+    body {
+      /* font-family: Arial, sans-serif; */
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    h4 {
+      color: #007bff;
+    }
+
+    form {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="url"],
+    textarea {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    textarea {
+      height: 100px;
+    }
+
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  </style>
   <body>
       {% include 'nav.html' %} 
       {%include 'banner.html' %}
@@ -23,7 +76,7 @@
         <li>{{line}}</li>
         {% endfor %}
       </ol>
-      <h3>Salary: </h3>
+      <h3>Offered Salary: </h3>
       <p>{{job.currency}}{{job.salary}}</p>
 
       {% include 'application_form.html' %}
